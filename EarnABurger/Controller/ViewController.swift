@@ -11,9 +11,8 @@ import UIKit
 // <a href="https://www.flaticon.com/free-icons/run" title="run icons">Run icons created by Freepik - Flaticon</a>
 // <a href="https://www.flaticon.com/free-icons/burger" title="burger icons">Burger icons created by Freepik - Flaticon</a>
 
-class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class ViewController: UIViewController  {
     
-
     @IBOutlet weak var StatFrequencyPickerView: UIPickerView!
     @IBOutlet weak var ActivityPickerView: UIPickerView!
     @IBOutlet weak var ProfileImageView: UIImageView!
@@ -33,6 +32,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         StatFrequencyPickerView.dataSource = self
         StatFrequencyPickerView.delegate = self
     }
+    
+    
+}
+
+//MARK: - UIPickerView
+extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -64,5 +69,4 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
         return nil
     }
-    
 }
