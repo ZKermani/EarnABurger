@@ -18,8 +18,6 @@ class ViewController: UIViewController  {
     @IBOutlet weak var ActivityPickerView: UIPickerView!
     @IBOutlet weak var ProfileImageView: UIImageView!
     
-    let cornerRadiusMultiplier = 0.1
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -39,6 +37,9 @@ class ViewController: UIViewController  {
         StatFrequencyPickerView.delegate = self
     }
     
+    @IBAction func startButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "StartToLiveActivity", sender: self)
+    }
     
 }
 
