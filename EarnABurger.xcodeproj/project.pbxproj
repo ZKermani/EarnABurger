@@ -13,6 +13,7 @@
 		8D3FE76627F1CAD80010DECD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D3FE76427F1CAD80010DECD /* Main.storyboard */; };
 		8D3FE76827F1CADC0010DECD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D3FE76727F1CADC0010DECD /* Assets.xcassets */; };
 		8D3FE76B27F1CADC0010DECD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D3FE76927F1CADC0010DECD /* LaunchScreen.storyboard */; };
+		8D4143EF27F4678400B664B9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4143EE27F4678400B664B9 /* Constants.swift */; };
 		8DD226F427F31AAF009C392B /* SampleProfile.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8DD226F327F31AAF009C392B /* SampleProfile.jpeg */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		8D3FE76727F1CADC0010DECD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D3FE76A27F1CADC0010DECD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D3FE76C27F1CADC0010DECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D4143EE27F4678400B664B9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8DD226F327F31AAF009C392B /* SampleProfile.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SampleProfile.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +63,7 @@
 				8D3FE75E27F1CAD80010DECD /* AppDelegate.swift */,
 				8D3FE76027F1CAD80010DECD /* SceneDelegate.swift */,
 				8D3FE76227F1CAD80010DECD /* ViewController.swift */,
+				8D4143EE27F4678400B664B9 /* Constants.swift */,
 				8D3FE76427F1CAD80010DECD /* Main.storyboard */,
 				8D3FE76727F1CADC0010DECD /* Assets.xcassets */,
 				8D3FE76927F1CADC0010DECD /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 				8D3FE76327F1CAD80010DECD /* ViewController.swift in Sources */,
 				8D3FE75F27F1CAD80010DECD /* AppDelegate.swift in Sources */,
 				8D3FE76127F1CAD80010DECD /* SceneDelegate.swift in Sources */,
+				8D4143EF27F4678400B664B9 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

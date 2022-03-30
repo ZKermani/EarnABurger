@@ -77,7 +77,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ActivityPickerView" destination="CKf-dm-Jiz" id="lpG-BC-dMW"/>
                         <outlet property="ProfileImageView" destination="VSM-1R-4dc" id="8N4-C0-brB"/>
+                        <outlet property="StatFrequencyPickerView" destination="v2S-J2-Dkf" id="Gy9-br-dyy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
