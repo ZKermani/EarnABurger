@@ -13,13 +13,19 @@ import UIKit
 
 class ViewController: UIViewController  {
     
+    @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var StatFrequencyPickerView: UIPickerView!
     @IBOutlet weak var ActivityPickerView: UIPickerView!
     @IBOutlet weak var ProfileImageView: UIImageView!
+    
+    let cornerRadiusMultiplier = 0.1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        ProfileImageView.layer.cornerRadius = 0.1 * ProfileImageView.frame.height
+        ProfileImageView.layer.cornerRadius = cornerRadiusMultiplier * ProfileImageView.frame.height
+        
+        startButton.layer.cornerRadius = cornerRadiusMultiplier * startButton.frame.height
         
         assignPickerViewDelegate()
         

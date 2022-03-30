@@ -29,6 +29,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPa-5z-sdO">
                                 <rect key="frame" x="124" y="378" width="166" height="59.5"/>
+                                <color key="backgroundColor" red="0.023529411760000001" green="0.17254901959999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="START">
@@ -80,6 +81,7 @@
                         <outlet property="ActivityPickerView" destination="CKf-dm-Jiz" id="lpG-BC-dMW"/>
                         <outlet property="ProfileImageView" destination="VSM-1R-4dc" id="8N4-C0-brB"/>
                         <outlet property="StatFrequencyPickerView" destination="v2S-J2-Dkf" id="Gy9-br-dyy"/>
+                        <outlet property="startButton" destination="kPa-5z-sdO" id="Dbm-WA-Jve"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
