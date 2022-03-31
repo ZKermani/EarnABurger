@@ -20,13 +20,13 @@ class ViewController: UIViewController  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        ProfileImageView.layer.cornerRadius = cornerRadiusMultiplier * ProfileImageView.frame.height
         
+        // UI adjustments
+        ProfileImageView.layer.cornerRadius = 0.5 * ProfileImageView.frame.height
+        ProfileImageView.clipsToBounds = true
         startButton.layer.cornerRadius = cornerRadiusMultiplier * startButton.frame.height
         
         assignPickerViewDelegate()
-        
     }
     
     func assignPickerViewDelegate() {

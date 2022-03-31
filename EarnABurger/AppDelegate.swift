@@ -5,6 +5,9 @@
 //  Created by Zahra Sadeghipoor on 3/28/22.
 //
 
+// With help from following sources
+// https://github.com/codeWithCal/TimerAppSwiftXcode
+
 import UIKit
 
 @main
