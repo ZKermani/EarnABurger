@@ -6,24 +6,45 @@
 //
 
 import UIKit
+import MapKit
 
 class LiveActivityViewController: UIViewController {
 
     @IBOutlet weak var endButton: UIButton!
     @IBOutlet weak var pauseButton: UIButton!
 
+    @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var TimerLabel: UILabel!
     
     var timer: Timer = Timer()
     var count: Int = 0
     var timerCounting: Bool = false
-
+    
+    // Distance properties
+    let locationManager = CLLocationManager()
+    var startLocation: CLLocation!
+    var lastLocation: CLLocation!
+    var startDate: Date!
+    var traveledDistance: Double = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // UI adjustments
         endButton.layer.cornerRadius   = cornerRadiusMultiplier * endButton.frame.height
         pauseButton.layer.cornerRadius = cornerRadiusMultiplier * pauseButton.frame.height
+        
+       // Location manager
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestWhenInUseAuthorization()
+            locationManager.startUpdatingLocation()
+            locationManager.startMonitoringSignificantLocationChanges()
+            locationManager.distanceFilter = 10
+            mapView.showsUserLocation = true
+            mapView.userTrackingMode = .follow
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -69,7 +90,10 @@ class LiveActivityViewController: UIViewController {
         
         self.present(alert, animated: true, completion: nil)
     }
-    
+}
+
+// MARK: - Timer utilities
+extension LiveActivityViewController {
     @objc func timerCounter() -> Void
     {
         count = count + 1
@@ -91,5 +115,30 @@ class LiveActivityViewController: UIViewController {
         timeString += String(format: "%02d", seconds)
         return timeString
     }
+}
+
+// MARK: - Location manager
+extension LiveActivityViewController: CLLocationManagerDelegate {
     
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if startDate == nil {
+            startDate = Date()
+        } else {
+            print("elapsedTime:", String(format: "%.0fs", Date().timeIntervalSince(startDate)))
+        }
+        if startLocation == nil {
+            startLocation = locations.first
+        } else if let location = locations.last {
+            traveledDistance += lastLocation.distance(from: location)
+            print("Traveled Distance:",  traveledDistance)
+            print("Straight Distance:", startLocation.distance(from: locations.last!))
+        }
+        lastLocation = locations.last
+    }
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        if (error as? CLError)?.code == .denied {
+            manager.stopUpdatingLocation()
+            manager.stopMonitoringSignificantLocationChanges()
+        }
+    }
 }

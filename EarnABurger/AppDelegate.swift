@@ -7,6 +7,7 @@
 
 // With help from following sources
 // https://github.com/codeWithCal/TimerAppSwiftXcode
+// https://stackoverflow.com/questions/28952747/calculate-total-traveled-distance-ios-swift
 
 import UIKit
 

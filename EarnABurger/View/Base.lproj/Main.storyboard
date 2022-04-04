@@ -195,6 +195,9 @@
                                 <color key="tintColor" red="0.023529411760000001" green="0.17254901959999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="barTintColor" red="0.023529411760000001" green="0.17254901959999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tabBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wiQ-bV-lhi">
+                                <rect key="frame" x="41.5" y="669" width="331" height="128"/>
+                            </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="g8R-gL-cAn"/>
                         <color key="backgroundColor" red="0.106669344" green="0.26279917359999999" blue="0.28420302269999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -202,22 +205,27 @@
                             <constraint firstItem="s03-d5-cda" firstAttribute="width" secondItem="9ZE-Ew-qbZ" secondAttribute="width" multiplier="0.8" id="0CQ-8T-4QM"/>
                             <constraint firstItem="Br9-3C-1S9" firstAttribute="centerX" secondItem="g8R-gL-cAn" secondAttribute="centerX" id="2D4-v8-yPJ"/>
                             <constraint firstAttribute="trailing" secondItem="Jye-01-RHL" secondAttribute="trailing" id="3uR-qp-dwW"/>
+                            <constraint firstItem="wiQ-bV-lhi" firstAttribute="top" secondItem="s03-d5-cda" secondAttribute="top" constant="60" id="7PP-qT-yxj"/>
                             <constraint firstItem="s03-d5-cda" firstAttribute="centerX" secondItem="g8R-gL-cAn" secondAttribute="centerX" id="9q3-XJ-0ej"/>
                             <constraint firstItem="dHN-bI-UVB" firstAttribute="centerY" secondItem="g8R-gL-cAn" secondAttribute="centerY" multiplier="0.8" id="9wS-ex-CIO"/>
                             <constraint firstItem="Br9-3C-1S9" firstAttribute="width" secondItem="9ZE-Ew-qbZ" secondAttribute="width" multiplier="0.5" id="B75-eC-e65"/>
                             <constraint firstItem="MwM-7r-d0a" firstAttribute="centerX" secondItem="g8R-gL-cAn" secondAttribute="centerX" id="CJm-mH-6xg"/>
+                            <constraint firstItem="wiQ-bV-lhi" firstAttribute="width" secondItem="9ZE-Ew-qbZ" secondAttribute="width" multiplier="0.8" id="DdZ-pl-vyS"/>
+                            <constraint firstItem="wiQ-bV-lhi" firstAttribute="centerX" secondItem="g8R-gL-cAn" secondAttribute="centerX" id="Ina-fy-vgp"/>
                             <constraint firstItem="Br9-3C-1S9" firstAttribute="centerY" secondItem="g8R-gL-cAn" secondAttribute="centerY" multiplier="0.4" id="Pmm-MI-S5b"/>
                             <constraint firstItem="dHN-bI-UVB" firstAttribute="centerX" secondItem="g8R-gL-cAn" secondAttribute="centerX" id="aQe-si-FkP"/>
                             <constraint firstItem="s03-d5-cda" firstAttribute="centerY" secondItem="g8R-gL-cAn" secondAttribute="centerY" multiplier="1.4" id="cE4-jl-TWc"/>
                             <constraint firstItem="MwM-7r-d0a" firstAttribute="top" secondItem="dHN-bI-UVB" secondAttribute="top" constant="70" id="cW8-kj-ETq"/>
                             <constraint firstItem="Jye-01-RHL" firstAttribute="leading" secondItem="9ZE-Ew-qbZ" secondAttribute="leading" id="eVz-xT-ewn"/>
                             <constraint firstItem="dHN-bI-UVB" firstAttribute="width" secondItem="9ZE-Ew-qbZ" secondAttribute="width" multiplier="0.9" id="fTz-Er-6D1"/>
+                            <constraint firstItem="wiQ-bV-lhi" firstAttribute="height" secondItem="9ZE-Ew-qbZ" secondAttribute="height" multiplier="0.142857" id="h17-jG-tQ6"/>
                             <constraint firstAttribute="bottom" secondItem="Jye-01-RHL" secondAttribute="bottom" id="jQN-np-DxA"/>
                             <constraint firstItem="MwM-7r-d0a" firstAttribute="width" secondItem="9ZE-Ew-qbZ" secondAttribute="width" id="wKh-bm-y79"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="endButton" destination="bbo-ih-VhD" id="iQJ-cp-WCP"/>
+                        <outlet property="mapView" destination="wiQ-bV-lhi" id="ix5-wC-JTr"/>
                         <outlet property="pauseButton" destination="fs2-gb-tSx" id="CpO-ZB-zYl"/>
                         <outlet property="timerLabel" destination="Br9-3C-1S9" id="oRx-yZ-opY"/>
                     </connections>
