@@ -15,7 +15,9 @@ class LiveActivityViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var TimerLabel: UILabel!
-    
+    @IBOutlet weak var DistanceLabel: UILabel!
+    @IBOutlet weak var CurrentPaceLabel: UILabel!
+    @IBOutlet weak var AvgPaceLabel: UILabel!
     var timer: Timer = Timer()
     var count: Int = 0
     var timerCounting: Bool = false
@@ -41,7 +43,7 @@ class LiveActivityViewController: UIViewController {
             locationManager.requestWhenInUseAuthorization()
             locationManager.startUpdatingLocation()
             locationManager.startMonitoringSignificantLocationChanges()
-            locationManager.distanceFilter = 10
+            locationManager.distanceFilter = 1 //10
             mapView.showsUserLocation = true
             mapView.userTrackingMode = .follow
         }
@@ -132,6 +134,8 @@ extension LiveActivityViewController: CLLocationManagerDelegate {
             traveledDistance += lastLocation.distance(from: location)
             print("Traveled Distance:",  traveledDistance)
             print("Straight Distance:", startLocation.distance(from: locations.last!))
+            let traveledDistanceString = String(format: "%.2f", traveledDistance / 1000)
+            DistanceLabel.text = traveledDistanceString
         }
         lastLocation = locations.last
     }
