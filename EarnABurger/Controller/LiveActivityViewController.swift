@@ -135,7 +135,12 @@ extension LiveActivityViewController: CLLocationManagerDelegate {
             print("Traveled Distance:",  traveledDistance)
             print("Straight Distance:", startLocation.distance(from: locations.last!))
             let traveledDistanceString = String(format: "%.2f", traveledDistance / 1000)
-            DistanceLabel.text = traveledDistanceString
+            DistanceLabel.text = traveledDistanceString + " km"
+            let elapsedTime = 100.0
+            let averagePace = traveledDistance > 0.0 ? elapsedTime / traveledDistance : 0.0
+            let averagePaceString = String(format: "%.2f", averagePace) + " min/km"
+            AvgPaceLabel.text = averagePaceString
+            CurrentPaceLabel.text = averagePaceString
         }
         lastLocation = locations.last
     }

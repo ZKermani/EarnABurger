@@ -7,7 +7,7 @@
 
 import Foundation
 
-let cornerRadiusMultiplier = 0.1
+let cornerRadiusMultiplier = 0.2
 
 let activities = ["Running", "Walking"]
 let statsFrequencies = ["2 min", "5 min", "10 min", "20 min", "30 min"]
