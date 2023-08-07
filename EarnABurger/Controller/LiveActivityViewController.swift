@@ -79,7 +79,7 @@ class LiveActivityViewController: UIViewController {
     }
     
     @IBAction func endTapped(_ sender: Any) {
-        let alert = UIAlertController(title: "End activity.", message: "Are you done?", preferredStyle: .alert)
+        let alert = UIAlertController(title: title, message: "Are you done?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "NO", style: .cancel, handler: { (_) in
             //do nothing
         }))
