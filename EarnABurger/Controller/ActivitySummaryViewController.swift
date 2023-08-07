@@ -34,11 +34,20 @@ class ActivitySummaryViewController: UIViewController {
             "Distance": Distance!,
             "Speed": AvgPace!
         ]) { err in
+            var message = ""
             if let err = err {
                 print("Error saving activitiy: \(err)")
+                message = "Error saving activitiy: \(err)"
             } else {
                 print("Activity saved successfully")
+                message =  "Activity saved successfully."
             }
+            
+            let alert = UIAlertController(title: self.title, message: message, preferredStyle: .alert)
+            //alert.view.tintColor = .white
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(okAction)
+            self.present(alert, animated: true, completion: nil)
         }
     }
 }
