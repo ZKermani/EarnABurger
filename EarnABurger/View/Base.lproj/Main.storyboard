@@ -241,7 +241,7 @@
                         <outlet property="endButton" destination="bbo-ih-VhD" id="iQJ-cp-WCP"/>
                         <outlet property="mapView" destination="wiQ-bV-lhi" id="ix5-wC-JTr"/>
                         <outlet property="pauseButton" destination="fs2-gb-tSx" id="CpO-ZB-zYl"/>
-                        <segue destination="iHB-Tu-6LV" kind="show" identifier="ActivityToSummary" id="vH4-0P-H0K"/>
+                        <segue destination="iHB-Tu-6LV" kind="presentation" identifier="ActivityToSummary" modalPresentationStyle="fullScreen" id="vH4-0P-H0K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bdV-7Q-Ba1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -274,11 +274,11 @@
             <objects>
                 <viewController id="iHB-Tu-6LV" customClass="ActivitySummaryViewController" customModule="EarnABurger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uCX-ma-Mbj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="POC-Xv-CBM">
-                                <rect key="frame" x="74" y="551" width="266" height="50"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="POC-Xv-CBM">
+                                <rect key="frame" x="74" y="566.5" width="266" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2CT-0G-4ot">
                                         <rect key="frame" x="0.0" y="0.0" width="108" height="50"/>
@@ -290,7 +290,7 @@
                                         </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bk-Bz-84m">
-                                        <rect key="frame" x="178" y="0.0" width="88" height="50"/>
+                                        <rect key="frame" x="158" y="0.0" width="108" height="50"/>
                                         <color key="backgroundColor" red="0.070588238540000001" green="0.1686274707" blue="0.1843137443" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -312,6 +312,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hwS-y1-OhQ"/>
+                    <connections>
+                        <outlet property="DeleteButton" destination="2CT-0G-4ot" id="S0X-vQ-e9w"/>
+                        <outlet property="SaveButton" destination="3bk-Bz-84m" id="iif-IQ-903"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fHy-36-7pY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -351,7 +355,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o73-id-R9x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3750.7246376811595" y="64.955357142857139"/>
+            <point key="canvasLocation" x="1846" y="948"/>
         </scene>
     </scenes>
     <resources>

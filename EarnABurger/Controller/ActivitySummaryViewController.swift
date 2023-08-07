@@ -14,10 +14,17 @@ class ActivitySummaryViewController: UIViewController {
     var Time: String?
     var AvgPace: String?
     
+    @IBOutlet weak var DeleteButton: UIButton!
+    @IBOutlet weak var SaveButton: UIButton!
+    
     let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // UI Adjustments
+        DeleteButton.layer.cornerRadius = cornerRadiusMultiplier * DeleteButton.frame.height
+        SaveButton.layer.cornerRadius   = cornerRadiusMultiplier * SaveButton.frame.height
         
     }
     
