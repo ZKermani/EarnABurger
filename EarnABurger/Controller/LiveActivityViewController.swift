@@ -87,10 +87,21 @@ class LiveActivityViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "YES", style: .default, handler: { (_) in
             
             // present activity summary first
-            self.dismiss(animated: true, completion: nil)
+            self.performSegue(withIdentifier: "ActivityToSummary", sender: self)
+            //self.dismiss(animated: true, completion: nil)
         }))
         
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "ActivityToSummary" {
+            let destinationVC = segue.destination as! ActivitySummaryViewController
+            destinationVC.Distance = DistanceLabel.text
+            destinationVC.Time = TimerLabel.text
+            destinationVC.AvgPace = AvgPaceLabel.text
+        }
     }
 }
 

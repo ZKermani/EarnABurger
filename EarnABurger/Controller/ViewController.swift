@@ -18,6 +18,7 @@ class ViewController: UIViewController  {
     @IBOutlet weak var ActivityPickerView: UIPickerView!
     @IBOutlet weak var ProfileImageView: UIImageView!
     
+    @IBOutlet weak var HomeTabBar: UITabBar!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,6 +27,8 @@ class ViewController: UIViewController  {
         ProfileImageView.clipsToBounds = true
         startButton.layer.cornerRadius = cornerRadiusMultiplier * startButton.frame.height
         
+        // Delegates
+        HomeTabBar.delegate = self
         assignPickerViewDelegate()
     }
     
@@ -75,5 +78,23 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
             return NSAttributedString(string: safeTitle, attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         }
         return nil
+    }
+}
+
+// MARK: - Tab bar delegate
+extension ViewController: UITabBarDelegate {
+    
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        
+        if let title = item.title {
+            
+            switch title {
+            case "Past Activities":
+                self.performSegue(withIdentifier: "HomeToHistory", sender: self)
+            default:
+                print("Unknown tab bar item!")
+                return
+            }
+        }
     }
 }
