@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if(userLoginStatus)
         {
             let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let viewController = mainStoryboard.instantiateViewController(withIdentifier: "SecondViewController") as! LiveActivityViewController
+            let viewController = mainStoryboard.instantiateViewController(withIdentifier: "LogInViewController") as! LogInViewController
             self.window?.rootViewController = viewController
             UIApplication.shared.windows.first?.rootViewController = viewController
             UIApplication.shared.windows.first?.makeKeyAndVisible()
