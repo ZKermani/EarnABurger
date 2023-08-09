@@ -58,6 +58,10 @@ class SignUpViewController: UIViewController {
     }
     
     func handleSuccessfulSignUp() {
+        
+        // With this UserDefaults set, the user will stay logged in unless they log out.
+        UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
+        
         let title = "Successful Sign Up!"
         let message = "You will be redirected to the activitiy page."
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)

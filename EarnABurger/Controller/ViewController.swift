@@ -22,8 +22,6 @@ class ViewController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
-        
         // UI adjustments
         ProfileImageView.layer.cornerRadius = 0.5 * ProfileImageView.frame.height
         ProfileImageView.clipsToBounds = true
