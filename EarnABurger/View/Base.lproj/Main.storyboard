@@ -58,7 +58,7 @@
                                 <items>
                                     <tabBarItem systemItem="favorites" id="kXC-1K-dm8"/>
                                     <tabBarItem title="Past Activities" image="figure.run.circle" catalog="system" id="ZsK-Hn-W9h"/>
-                                    <tabBarItem systemItem="more" id="VWa-Ta-y4U"/>
+                                    <tabBarItem title="Log Out" image="arrow.triangle.turn.up.right.circle.fill" catalog="system" id="VWa-Ta-y4U"/>
                                 </items>
                                 <color key="tintColor" red="0.106669344" green="0.26279917359999999" blue="0.28420302269999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="barTintColor" red="0.023529411760000001" green="0.17254901959999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -94,6 +94,7 @@
                         <outlet property="startButton" destination="kPa-5z-sdO" id="Dbm-WA-Jve"/>
                         <segue destination="QzU-Ra-V7P" kind="presentation" identifier="StartToLiveActivity" modalPresentationStyle="fullScreen" id="XyA-XG-ku6"/>
                         <segue destination="tpM-OB-xbg" kind="show" identifier="HomeToHistory" id="LCz-as-ZJK"/>
+                        <segue destination="2PA-Mq-DTl" kind="presentation" identifier="MainToLogin" modalPresentationStyle="fullScreen" id="DiK-Ae-u89"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -383,6 +384,9 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="LOG IN"/>
+                                <connections>
+                                    <action selector="logInButtonTapped:" destination="2PA-Mq-DTl" eventType="touchUpInside" id="t49-Rm-nZz"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Oi-RZ-iS5">
                                 <rect key="frame" x="64" y="808" width="286" height="34.5"/>
@@ -439,9 +443,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="Sp7-nO-b4C" id="QG1-5o-LWC"/>
                         <outlet property="logInButton" destination="Vrv-i1-tea" id="SEk-Yg-Swc"/>
+                        <outlet property="passwordTextField" destination="nLy-eL-mii" id="s2F-o5-8XR"/>
                         <outlet property="signUpButton" destination="QZJ-Vq-VJi" id="p3C-c5-lgt"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="KQF-LD-fY4"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="LoginToMain" modalPresentationStyle="fullScreen" id="KQF-LD-fY4"/>
                         <segue destination="1Ar-3k-fms" kind="presentation" identifier="LoginToSignup" modalPresentationStyle="fullScreen" id="2Zt-NR-h3k"/>
                     </connections>
                 </viewController>
@@ -509,10 +515,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hxs-33-rsj"/>
+        <segue reference="DiK-Ae-u89"/>
+        <segue reference="KQF-LD-fY4"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="SampleProfile.jpeg" width="640" height="640"/>
+        <image name="arrow.triangle.turn.up.right.circle.fill" catalog="system" width="128" height="123"/>
         <image name="figure.run.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

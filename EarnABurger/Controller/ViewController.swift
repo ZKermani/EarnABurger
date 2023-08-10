@@ -91,6 +91,10 @@ extension ViewController: UITabBarDelegate {
             switch title {
             case "Past Activities":
                 self.performSegue(withIdentifier: "HomeToHistory", sender: self)
+            case "Log Out":
+                UserDefaults.standard.set(false, forKey: "isUserLoggedIn")
+                performSegue(withIdentifier: "MainToLogin", sender: self)
+                
             default:
                 print("Unknown tab bar item!")
                 return
