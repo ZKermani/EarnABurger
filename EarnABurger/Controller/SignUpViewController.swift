@@ -13,11 +13,13 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var SignUpButton: UIButton!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var backButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // UI Adjustments
         SignUpButton.layer.cornerRadius = cornerRadiusMultiplier * SignUpButton.frame.height
+        backButton.layer.cornerRadius = cornerRadiusMultiplier * backButton.frame.height
     }
     
     @IBAction func signUpButtonTapped(_ sender: UIButton) {
@@ -72,4 +74,9 @@ class SignUpViewController: UIViewController {
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
     }
+    
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
+    
 }
