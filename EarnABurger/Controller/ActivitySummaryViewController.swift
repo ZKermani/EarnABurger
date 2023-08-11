@@ -30,9 +30,21 @@ class ActivitySummaryViewController: UIViewController {
     
     @IBAction func SaveButtonTapped(_ sender: UIButton) {
         // Add the following keys to a constants file
+        let activitySummary = ActivitySummary(date: "11 Aug 2023",
+                                              distance: Distance!,
+                                              duration: "20 min",
+                                              avgPace: AvgPace!)
+//        db.collection("Activities").addDocument(data: [
+//            "Distance": Distance!,
+//            "Speed": AvgPace!
+//        ]) { err in
+        
+        // TODO: This looks a bit excessive. Is there a better way of handling it?
         db.collection("Activities").addDocument(data: [
-            "Distance": Distance!,
-            "Speed": AvgPace!
+            K.FStore.dateField: activitySummary.date,
+            K.FStore.distanceField: activitySummary.distance,
+            K.FStore.durationField: activitySummary.duration,
+            K.FStore.avgPaceField: activitySummary.avgPace
         ]) { err in
             var message = ""
             if let err = err {
