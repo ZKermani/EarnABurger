@@ -28,6 +28,10 @@ class LiveActivityViewController: UIViewController {
     var lastLocation: CLLocation!
     var startDate: Date!
     var traveledDistance: Double = 0
+    var oldPosition: Double = 0
+    let currentPaceInterval: Int = 30 // In seconds
+    var currentPace: Double = 0.0
+    let updateStatsInterval: Int = 10 // In seconds
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,6 +117,20 @@ extension LiveActivityViewController {
         let time = secondsToHoursMinutesSeconds(seconds: count)
         let timeString = makeTimeString(hours: time.0, minutes: time.1, seconds: time.2)
         TimerLabel.text = timeString
+        
+        if count % currentPaceInterval == 0 {
+            // Update current pace at this point
+            let distanceTraveledSinceLastTime = traveledDistance - oldPosition
+            print("traveledDistance is \(traveledDistance). old position is \(oldPosition).")
+            let elpasedTimeInMinutes = Double(currentPaceInterval) / 60
+            let traveledDistanceInKM = distanceTraveledSinceLastTime / 1000
+            currentPace = traveledDistanceInKM > 0 ? elpasedTimeInMinutes / traveledDistanceInKM : 0.0
+            oldPosition = traveledDistance
+        }
+        
+        if count % updateStatsInterval == 0 {
+            updateLabels()
+        }
     }
     
     func secondsToHoursMinutesSeconds(seconds: Int) -> (Int, Int, Int) {
@@ -145,13 +163,6 @@ extension LiveActivityViewController: CLLocationManagerDelegate {
             traveledDistance += lastLocation.distance(from: location)
             print("Traveled Distance:",  traveledDistance)
             print("Straight Distance:", startLocation.distance(from: locations.last!))
-            let traveledDistanceString = String(format: "%.2f", traveledDistance / 1000)
-            DistanceLabel.text = traveledDistanceString + " km"
-            let elapsedTime = 100.0
-            let averagePace = traveledDistance > 0.0 ? elapsedTime / traveledDistance : 0.0
-            let averagePaceString = String(format: "%.2f", averagePace) + " min/km"
-            AvgPaceLabel.text = averagePaceString
-            CurrentPaceLabel.text = averagePaceString
         }
         lastLocation = locations.last
     }
@@ -160,5 +171,18 @@ extension LiveActivityViewController: CLLocationManagerDelegate {
             manager.stopUpdatingLocation()
             manager.stopMonitoringSignificantLocationChanges()
         }
+    }
+    
+    func updateLabels() {
+        let traveledDistanceString = String(format: "%.2f", traveledDistance / 1000)
+        DistanceLabel.text = traveledDistanceString + " km"
+        let elapsedTime = 100.0
+        let averagePace = traveledDistance > 0.0 ? elapsedTime / traveledDistance : 0.0
+        let averagePaceString = String(format: "%.2f", averagePace) + " min/km"
+        AvgPaceLabel.text = averagePaceString
+        
+        let currentPaceValue  = count < currentPaceInterval ? averagePace : currentPace
+        let currentPaceString = String(format: "%.2f", currentPaceValue) + " min/km"
+        CurrentPaceLabel.text = currentPaceString
     }
 }
