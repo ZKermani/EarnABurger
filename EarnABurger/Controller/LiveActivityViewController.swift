@@ -29,7 +29,6 @@ class LiveActivityViewController: UIViewController {
     var startDate: Date!
     var traveledDistance: Double = 0
     var oldPosition: Double = 0
-    let currentPaceInterval: Int = 30 // In seconds
     var currentPace: Double = 0.0
     let updateStatsInterval: Int = 10 // In seconds
     
@@ -118,17 +117,14 @@ extension LiveActivityViewController {
         let timeString = makeTimeString(hours: time.0, minutes: time.1, seconds: time.2)
         TimerLabel.text = timeString
         
-        if count % currentPaceInterval == 0 {
+        if count % updateStatsInterval == 0 {
             // Update current pace at this point
             let distanceTraveledSinceLastTime = traveledDistance - oldPosition
             print("traveledDistance is \(traveledDistance). old position is \(oldPosition).")
-            let elpasedTimeInMinutes = Double(currentPaceInterval) / 60
+            let elpasedTimeInMinutes = Double(updateStatsInterval) / 60
             let traveledDistanceInKM = distanceTraveledSinceLastTime / 1000
             currentPace = traveledDistanceInKM > 0 ? elpasedTimeInMinutes / traveledDistanceInKM : 0.0
             oldPosition = traveledDistance
-        }
-        
-        if count % updateStatsInterval == 0 {
             updateLabels()
         }
     }
@@ -174,14 +170,16 @@ extension LiveActivityViewController: CLLocationManagerDelegate {
     }
     
     func updateLabels() {
-        let traveledDistanceString = String(format: "%.2f", traveledDistance / 1000)
+        let traveledDistanceInKm = traveledDistance / 1000
+        let traveledDistanceString = String(format: "%.2f", traveledDistanceInKm)
         DistanceLabel.text = traveledDistanceString + " km"
-        let elapsedTime = 100.0
-        let averagePace = traveledDistance > 0.0 ? elapsedTime / traveledDistance : 0.0
+        let elapsedTimeInMinutes = Double(count) / 60.0
+        let averagePace = traveledDistance > 0.0 ? elapsedTimeInMinutes / traveledDistanceInKm : 0.0
+        print("In updateLabels, traveleDistance is \(traveledDistance), elapsedTimeInMinutes is \(elapsedTimeInMinutes), and averagePace is \(averagePace)")
         let averagePaceString = String(format: "%.2f", averagePace) + " min/km"
         AvgPaceLabel.text = averagePaceString
         
-        let currentPaceValue  = count < currentPaceInterval ? averagePace : currentPace
+        let currentPaceValue  = count < updateStatsInterval ? averagePace : currentPace
         let currentPaceString = String(format: "%.2f", currentPaceValue) + " min/km"
         CurrentPaceLabel.text = currentPaceString
     }
