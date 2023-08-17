@@ -13,7 +13,6 @@ import UIKit
 
 class ViewController: UIViewController  {
     
-    @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var StatFrequencyPickerView: UIPickerView!
     @IBOutlet weak var ActivityPickerView: UIPickerView!
     @IBOutlet weak var ProfileImageView: UIImageView!
@@ -25,7 +24,6 @@ class ViewController: UIViewController  {
         // UI adjustments
         ProfileImageView.layer.cornerRadius = 0.5 * ProfileImageView.frame.height
         ProfileImageView.clipsToBounds = true
-        startButton.layer.cornerRadius = cornerRadiusMultiplier * startButton.frame.height
         
         // Delegates
         HomeTabBar.delegate = self
@@ -39,11 +37,6 @@ class ViewController: UIViewController  {
         StatFrequencyPickerView.dataSource = self
         StatFrequencyPickerView.delegate = self
     }
-    
-    @IBAction func startButtonPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "StartToLiveActivity", sender: self)
-    }
-    
 }
 
 //MARK: - UIPickerView
@@ -89,12 +82,15 @@ extension ViewController: UITabBarDelegate {
         if let title = item.title {
             
             switch title {
+            case "Home":
+                break
+            case "Start":
+                performSegue(withIdentifier: "StartToLiveActivity", sender: self)
             case "Past Activities":
                 self.performSegue(withIdentifier: "HomeToHistory", sender: self)
             case "Log Out":
                 UserDefaults.standard.set(false, forKey: "isUserLoggedIn")
                 performSegue(withIdentifier: "MainToLogin", sender: self)
-                
             default:
                 print("Unknown tab bar item!")
                 return

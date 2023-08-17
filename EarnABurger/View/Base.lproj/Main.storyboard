@@ -28,18 +28,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPa-5z-sdO">
-                                <rect key="frame" x="124" y="380" width="166" height="59.5"/>
-                                <color key="backgroundColor" red="0.023529411760000001" green="0.17254901959999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="START">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="38"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="startButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3sb-PO-cSr"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hQb-Vw-zdz">
                                 <rect key="frame" x="0.0" y="483.5" width="414" height="216"/>
                                 <subviews>
@@ -68,13 +56,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.106669344" green="0.26279917359999999" blue="0.28420302269999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="kPa-5z-sdO" firstAttribute="width" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="1ug-jK-TQX"/>
                             <constraint firstItem="a32-eD-k1M" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5G3-9K-XJR"/>
                             <constraint firstItem="hQb-Vw-zdz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="ESw-hd-5ss"/>
-                            <constraint firstItem="kPa-5z-sdO" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.9" id="JlA-vP-T2Q"/>
                             <constraint firstAttribute="trailing" secondItem="Tp1-H7-wIb" secondAttribute="trailing" id="Odg-iR-RwU"/>
                             <constraint firstItem="a32-eD-k1M" firstAttribute="width" secondItem="VSM-1R-4dc" secondAttribute="width" id="QDu-RP-qgI"/>
-                            <constraint firstItem="kPa-5z-sdO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bhf-TC-j3u"/>
                             <constraint firstAttribute="bottom" secondItem="Tp1-H7-wIb" secondAttribute="bottom" id="c3P-7j-hJg"/>
                             <constraint firstItem="VSM-1R-4dc" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.33" id="kQk-Hj-r6x"/>
                             <constraint firstItem="hQb-Vw-zdz" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.3" id="mEC-LB-RWA"/>
@@ -91,7 +76,6 @@
                         <outlet property="HomeTabBar" destination="Tp1-H7-wIb" id="fSg-TA-DmX"/>
                         <outlet property="ProfileImageView" destination="VSM-1R-4dc" id="8N4-C0-brB"/>
                         <outlet property="StatFrequencyPickerView" destination="v2S-J2-Dkf" id="Gy9-br-dyy"/>
-                        <outlet property="startButton" destination="kPa-5z-sdO" id="Dbm-WA-Jve"/>
                         <segue destination="QzU-Ra-V7P" kind="presentation" identifier="StartToLiveActivity" modalPresentationStyle="fullScreen" id="XyA-XG-ku6"/>
                         <segue destination="tpM-OB-xbg" kind="presentation" identifier="HomeToHistory" modalPresentationStyle="fullScreen" id="LCz-as-ZJK"/>
                         <segue destination="hwr-iL-V78" kind="presentation" identifier="MainToLogin" modalPresentationStyle="fullScreen" id="DiK-Ae-u89"/>
