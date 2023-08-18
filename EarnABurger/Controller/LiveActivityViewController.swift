@@ -9,7 +9,7 @@ import UIKit
 import MapKit
 
 class LiveActivityViewController: UIViewController {
-
+    
     @IBOutlet weak var endButton: UIButton!
     @IBOutlet weak var pauseButton: UIButton!
 

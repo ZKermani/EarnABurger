@@ -69,7 +69,7 @@ class SignUpViewController: UIViewController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         //alert.view.tintColor = .white
         let okAction = UIAlertAction(title: "OK", style: .default, handler: {_ in
-            self.performSegue(withIdentifier: "SignupToMain", sender: self)
+            self.performSegue(withIdentifier: "SignupToHome", sender: self)
         })
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)

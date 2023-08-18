@@ -11,11 +11,12 @@
 		2C5B52E92A81002A00BEDA3F /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B52E82A81002A00BEDA3F /* HistoryViewController.swift */; };
 		2C5B52ED2A83913300BEDA3F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B52EC2A83913300BEDA3F /* SignUpViewController.swift */; };
 		2C5B52EF2A83914900BEDA3F /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B52EE2A83914900BEDA3F /* LogInViewController.swift */; };
+		2C652A7E2A8F62C000596D21 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C652A7D2A8F62C000596D21 /* HomeViewController.swift */; };
+		2C652A802A8F6A7200596D21 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C652A7F2A8F6A7200596D21 /* StartViewController.swift */; };
 		2C755AB42A80EACD00E37DCE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C755AB32A80EACD00E37DCE /* GoogleService-Info.plist */; };
 		2C7FB25E2A86270300EBCCDE /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7FB25D2A86270300EBCCDE /* DataStructures.swift */; };
 		8D3FE75F27F1CAD80010DECD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3FE75E27F1CAD80010DECD /* AppDelegate.swift */; };
 		8D3FE76127F1CAD80010DECD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3FE76027F1CAD80010DECD /* SceneDelegate.swift */; };
-		8D3FE76327F1CAD80010DECD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3FE76227F1CAD80010DECD /* ViewController.swift */; };
 		8D3FE76627F1CAD80010DECD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D3FE76427F1CAD80010DECD /* Main.storyboard */; };
 		8D3FE76827F1CADC0010DECD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D3FE76727F1CADC0010DECD /* Assets.xcassets */; };
 		8D3FE76B27F1CADC0010DECD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D3FE76927F1CADC0010DECD /* LaunchScreen.storyboard */; };
@@ -30,12 +31,13 @@
 		2C5B52E82A81002A00BEDA3F /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		2C5B52EC2A83913300BEDA3F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = EarnABurger/Controller/SignUpViewController.swift; sourceTree = SOURCE_ROOT; };
 		2C5B52EE2A83914900BEDA3F /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogInViewController.swift; path = /Users/zahrakermani/EarnABurger/EarnABurger/Controller/LogInViewController.swift; sourceTree = "<absolute>"; };
+		2C652A7D2A8F62C000596D21 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = EarnABurger/Controller/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
+		2C652A7F2A8F6A7200596D21 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		2C755AB32A80EACD00E37DCE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2C7FB25D2A86270300EBCCDE /* DataStructures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructures.swift; sourceTree = "<group>"; };
 		8D3FE75B27F1CAD80010DECD /* EarnABurger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EarnABurger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D3FE75E27F1CAD80010DECD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D3FE76027F1CAD80010DECD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8D3FE76227F1CAD80010DECD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8D3FE76527F1CAD80010DECD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D3FE76727F1CADC0010DECD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D3FE76A27F1CADC0010DECD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -106,9 +108,10 @@
 		8D4143F227F468A400B664B9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2C652A7F2A8F6A7200596D21 /* StartViewController.swift */,
 				2C5B52EE2A83914900BEDA3F /* LogInViewController.swift */,
 				2C5B52EC2A83913300BEDA3F /* SignUpViewController.swift */,
-				8D3FE76227F1CAD80010DECD /* ViewController.swift */,
+				2C652A7D2A8F62C000596D21 /* HomeViewController.swift */,
 				8DF64C6E27F4E0D500AFCE10 /* LiveActivityViewController.swift */,
 				2C5B52E62A80FB4000BEDA3F /* ActivitySummaryViewController.swift */,
 				2C5B52E82A81002A00BEDA3F /* HistoryViewController.swift */,
@@ -259,13 +262,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D3FE76327F1CAD80010DECD /* ViewController.swift in Sources */,
 				2C7FB25E2A86270300EBCCDE /* DataStructures.swift in Sources */,
 				8D3FE75F27F1CAD80010DECD /* AppDelegate.swift in Sources */,
 				2C5B52EF2A83914900BEDA3F /* LogInViewController.swift in Sources */,
 				2C5B52ED2A83913300BEDA3F /* SignUpViewController.swift in Sources */,
 				8D3FE76127F1CAD80010DECD /* SceneDelegate.swift in Sources */,
+				2C652A802A8F6A7200596D21 /* StartViewController.swift in Sources */,
 				8DF64C6F27F4E0D600AFCE10 /* LiveActivityViewController.swift in Sources */,
+				2C652A7E2A8F62C000596D21 /* HomeViewController.swift in Sources */,
 				2C5B52E72A80FB4000BEDA3F /* ActivitySummaryViewController.swift in Sources */,
 				2C5B52E92A81002A00BEDA3F /* HistoryViewController.swift in Sources */,
 				8D4143EF27F4678400B664B9 /* Constants.swift in Sources */,

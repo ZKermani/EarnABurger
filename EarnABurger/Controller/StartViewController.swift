@@ -11,7 +11,7 @@ import UIKit
 // <a href="https://www.flaticon.com/free-icons/run" title="run icons">Run icons created by Freepik - Flaticon</a>
 // <a href="https://www.flaticon.com/free-icons/burger" title="burger icons">Burger icons created by Freepik - Flaticon</a>
 
-class ViewController: UIViewController  {
+class StartViewController: UIViewController  {
     
     @IBOutlet weak var StatFrequencyPickerView: UIPickerView!
     @IBOutlet weak var ActivityPickerView: UIPickerView!
@@ -40,7 +40,7 @@ class ViewController: UIViewController  {
 }
 
 //MARK: - UIPickerView
-extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+extension StartViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -75,7 +75,7 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
 }
 
 // MARK: - Tab bar delegate
-extension ViewController: UITabBarDelegate {
+extension StartViewController: UITabBarDelegate {
     
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         
@@ -87,10 +87,7 @@ extension ViewController: UITabBarDelegate {
             case "Start":
                 performSegue(withIdentifier: "StartToLiveActivity", sender: self)
             case "Past Activities":
-                self.performSegue(withIdentifier: "HomeToHistory", sender: self)
-            case "Log Out":
-                UserDefaults.standard.set(false, forKey: "isUserLoggedIn")
-                performSegue(withIdentifier: "MainToLogin", sender: self)
+                self.performSegue(withIdentifier: "StartToHistory", sender: self)
             default:
                 print("Unknown tab bar item!")
                 return

@@ -70,6 +70,6 @@ class LogInViewController: UIViewController {
     func handleSuccessfulLogIn() {
         // With this UserDefaults set, the user will stay logged in unless they log out.
         UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
-        performSegue(withIdentifier: "LoginToMain", sender: self)
+        performSegue(withIdentifier: "LoginToHome", sender: self)
     }
 }

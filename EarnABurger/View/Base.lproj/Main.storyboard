@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z6Z-g4-z1X">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="v8f-Iz-MIe">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -11,7 +11,7 @@
         <!--Earn A Burger-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EarnABurger" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StartViewController" customModule="EarnABurger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,7 +46,6 @@
                                     <tabBarItem title="Home" image="house" catalog="system" id="kXC-1K-dm8"/>
                                     <tabBarItem title="Start" image="figure.run.circle" catalog="system" id="pBJ-2H-0pp"/>
                                     <tabBarItem title="Past Activities" image="figure.run.square.stack.fill" catalog="system" id="ZsK-Hn-W9h"/>
-                                    <tabBarItem title="Log Out" image="arrow.triangle.turn.up.right.circle.fill" catalog="system" id="VWa-Ta-y4U"/>
                                 </items>
                                 <color key="tintColor" red="0.106669344" green="0.26279917359999999" blue="0.28420302269999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="barTintColor" red="0.023529411760000001" green="0.17254901959999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -77,13 +76,12 @@
                         <outlet property="ProfileImageView" destination="VSM-1R-4dc" id="8N4-C0-brB"/>
                         <outlet property="StatFrequencyPickerView" destination="v2S-J2-Dkf" id="Gy9-br-dyy"/>
                         <segue destination="QzU-Ra-V7P" kind="presentation" identifier="StartToLiveActivity" modalPresentationStyle="fullScreen" id="XyA-XG-ku6"/>
-                        <segue destination="tpM-OB-xbg" kind="presentation" identifier="HomeToHistory" modalPresentationStyle="fullScreen" id="LCz-as-ZJK"/>
-                        <segue destination="hwr-iL-V78" kind="presentation" identifier="MainToLogin" modalPresentationStyle="fullScreen" id="DiK-Ae-u89"/>
+                        <segue destination="tpM-OB-xbg" kind="presentation" identifier="StartToHistory" modalPresentationStyle="fullScreen" id="LCz-as-ZJK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1797.1014492753625" y="64.955357142857139"/>
+            <point key="canvasLocation" x="2707.2463768115945" y="64.955357142857139"/>
         </scene>
         <!--Live Activity View Controller-->
         <scene sceneID="qDC-vV-YRQ">
@@ -187,23 +185,11 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <tabBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jye-01-RHL">
-                                <rect key="frame" x="0.0" y="813" width="414" height="83"/>
-                                <color key="backgroundColor" red="0.023529411760000001" green="0.17254901959999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <items>
-                                    <tabBarItem title="Home" image="house" catalog="system" id="zv5-cn-mIV"/>
-                                    <tabBarItem title="Start" image="figure.run.circle" catalog="system" id="gUA-HG-9pu"/>
-                                    <tabBarItem title="Past Activities" image="figure.run.square.stack.fill" catalog="system" id="RZa-c1-MOt"/>
-                                </items>
-                                <color key="tintColor" red="0.023529411760000001" green="0.17254901959999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="barTintColor" red="0.023529411760000001" green="0.17254901959999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </tabBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="g8R-gL-cAn"/>
                         <color key="backgroundColor" red="0.106669344" green="0.26279917359999999" blue="0.28420302269999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Br9-3C-1S9" firstAttribute="centerX" secondItem="g8R-gL-cAn" secondAttribute="centerX" id="2D4-v8-yPJ"/>
-                            <constraint firstAttribute="trailing" secondItem="Jye-01-RHL" secondAttribute="trailing" id="3uR-qp-dwW"/>
                             <constraint firstItem="0oT-V4-b2X" firstAttribute="centerY" secondItem="g8R-gL-cAn" secondAttribute="centerY" multiplier="1.5" id="6pZ-f8-zEz"/>
                             <constraint firstItem="0oT-V4-b2X" firstAttribute="height" secondItem="9ZE-Ew-qbZ" secondAttribute="height" multiplier="0.222656" id="6ss-1L-BFc"/>
                             <constraint firstItem="Br9-3C-1S9" firstAttribute="width" secondItem="9ZE-Ew-qbZ" secondAttribute="width" multiplier="0.5" id="B75-eC-e65"/>
@@ -213,9 +199,7 @@
                             <constraint firstItem="wjO-1X-2dd" firstAttribute="leading" secondItem="fs2-gb-tSx" secondAttribute="leading" id="Qaw-gt-UM5"/>
                             <constraint firstItem="wjO-1X-2dd" firstAttribute="trailing" secondItem="bbo-ih-VhD" secondAttribute="trailing" id="W5K-sD-Ox0"/>
                             <constraint firstItem="Fe5-1O-xNV" firstAttribute="trailing" secondItem="bbo-ih-VhD" secondAttribute="trailing" id="XHV-ZJ-tze"/>
-                            <constraint firstItem="Jye-01-RHL" firstAttribute="leading" secondItem="9ZE-Ew-qbZ" secondAttribute="leading" id="eVz-xT-ewn"/>
                             <constraint firstItem="wjO-1X-2dd" firstAttribute="centerY" secondItem="g8R-gL-cAn" secondAttribute="centerY" multiplier="0.85" id="gCq-PQ-AAN"/>
-                            <constraint firstAttribute="bottom" secondItem="Jye-01-RHL" secondAttribute="bottom" id="jQN-np-DxA"/>
                             <constraint firstItem="Fe5-1O-xNV" firstAttribute="leading" secondItem="bbo-ih-VhD" secondAttribute="leading" id="pxh-pz-QND"/>
                         </constraints>
                     </view>
@@ -233,7 +217,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bdV-7Q-Ba1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2626.0869565217395" y="64.955357142857139"/>
+            <point key="canvasLocation" x="3536.2318840579715" y="64.955357142857139"/>
         </scene>
         <!--Activity Summary View Controller-->
         <scene sceneID="snh-yR-Wc0">
@@ -299,7 +283,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fHy-36-7pY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3621.739130434783" y="64.955357142857139"/>
+            <point key="canvasLocation" x="4531.884057971015" y="64.955357142857139"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="92u-RE-IFv">
@@ -355,24 +339,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o73-id-R9x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1844.9275362318842" y="947.54464285714278"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Bhc-t1-tGk">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Z6Z-g4-z1X" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7f0-UH-U7j">
-                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zbK-wN-hJk"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="t7F-wJ-zyj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="886.95652173913049" y="64.955357142857139"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="yo8-pn-K34">
@@ -467,8 +433,8 @@
                         <outlet property="logInButton" destination="Vrv-i1-tea" id="SEk-Yg-Swc"/>
                         <outlet property="passwordTextField" destination="nLy-eL-mii" id="s2F-o5-8XR"/>
                         <outlet property="signUpButton" destination="QZJ-Vq-VJi" id="p3C-c5-lgt"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="LoginToMain" modalPresentationStyle="fullScreen" id="KQF-LD-fY4"/>
                         <segue destination="1Ar-3k-fms" kind="presentation" identifier="LoginToSignup" modalPresentationStyle="fullScreen" id="2Zt-NR-h3k"/>
+                        <segue destination="BP8-d5-Slv" kind="presentation" identifier="LoginToHome" modalPresentationStyle="fullScreen" id="M1c-HB-jMn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rqC-ZL-RTl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -537,7 +503,7 @@
                         <outlet property="backButton" destination="Pkn-eH-PIU" id="mIA-CB-g4e"/>
                         <outlet property="emailTextField" destination="Oni-2F-nW3" id="U59-88-C3U"/>
                         <outlet property="passwordTextField" destination="yau-zo-dNc" id="lk9-NM-DyZ"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="SignupToMain" modalPresentationStyle="fullScreen" id="hxs-33-rsj"/>
+                        <segue destination="BP8-d5-Slv" kind="presentation" identifier="SignupToHome" modalPresentationStyle="fullScreen" id="GPY-2N-RA8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cr7-Xi-1rs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -562,10 +528,64 @@
             </objects>
             <point key="canvasLocation" x="1763.7681159420292" y="-841.07142857142856"/>
         </scene>
+        <!--Home View Controller-->
+        <scene sceneID="LsN-IU-Cum">
+            <objects>
+                <viewController id="BP8-d5-Slv" customClass="HomeViewController" customModule="EarnABurger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Co2-dv-xch">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfa-ka-tEp">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem title="Home" image="house" catalog="system" id="dJx-UF-nbj"/>
+                                    <tabBarItem title="Start" image="figure.run.circle" catalog="system" id="VhY-WW-Kt4"/>
+                                    <tabBarItem title="Past Activities" image="figure.run.square.stack.fill" catalog="system" id="rhy-Eb-osr"/>
+                                    <tabBarItem title="Log out" image="arrow.triangle.turn.up.right.circle.fill" catalog="system" id="cOL-xC-fAK"/>
+                                </items>
+                                <color key="barTintColor" red="0.070588238540000001" green="0.1686274707" blue="0.1843137443" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </tabBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0Nn-vZ-29X"/>
+                        <color key="backgroundColor" red="0.14901961389999999" green="0.2588235438" blue="0.27843138579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wSw-gp-VPt"/>
+                    <connections>
+                        <outlet property="HomeTabBar" destination="Rfa-ka-tEp" id="bIn-00-S4S"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="HomeToStart" modalPresentationStyle="fullScreen" id="VHe-rY-GYx"/>
+                        <segue destination="hwr-iL-V78" kind="presentation" identifier="HomeToLogin" modalPresentationStyle="fullScreen" id="aNF-L0-wOF"/>
+                        <segue destination="tpM-OB-xbg" kind="presentation" identifier="HomeToHistory" modalPresentationStyle="fullScreen" id="BAD-bg-QS0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lz7-9L-cKY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1560.8695652173915" y="64.955357142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Vw4-UV-l7n">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v8f-Iz-MIe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hya-AV-sO7">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BP8-d5-Slv" kind="relationship" relationship="rootViewController" id="Lo2-yW-kKI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yk6-Il-w9y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="650.72463768115949" y="64.955357142857139"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="DiK-Ae-u89"/>
-        <segue reference="hxs-33-rsj"/>
+        <segue reference="M1c-HB-jMn"/>
+        <segue reference="BAD-bg-QS0"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="SampleProfile.jpeg" width="640" height="640"/>
