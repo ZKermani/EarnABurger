@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let userLoginStatus = UserDefaults.standard.bool(forKey: "isUserLoggedIn")
         
-        if(userLoginStatus)
+        if false //(userLoginStatus)
         {
             let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let viewController = mainStoryboard.instantiateViewController(withIdentifier: "LogInViewController") as! LogInViewController
