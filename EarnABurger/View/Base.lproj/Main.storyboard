@@ -40,7 +40,7 @@
                                 </subviews>
                             </stackView>
                             <tabBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tp1-H7-wIb">
-                                <rect key="frame" x="0.0" y="813" width="414" height="83"/>
+                                <rect key="frame" x="0.0" y="847" width="414" height="49"/>
                                 <color key="backgroundColor" red="0.106669344" green="0.26279917359999999" blue="0.28420302269999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <tabBarItem title="Home" image="house" catalog="system" id="kXC-1K-dm8"/>
@@ -347,7 +347,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="tnb-LQ-KVq"/>
                     <connections>
+                        <outlet property="HistoryTabBar" destination="Rab-7I-fq0" id="JQM-fe-R7b"/>
                         <outlet property="tableView" destination="7Pr-lW-0dA" id="bYi-Q9-Eu2"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="HistoryToStart" modalPresentationStyle="fullScreen" id="JA1-7l-uxb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o73-id-R9x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -551,7 +553,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tabBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfa-ka-tEp">
-                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <rect key="frame" x="-1" y="813" width="415" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
@@ -600,6 +602,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="M1c-HB-jMn"/>
         <segue reference="LCz-as-ZJK"/>
+        <segue reference="JA1-7l-uxb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="SampleProfile.jpeg" width="640" height="640"/>

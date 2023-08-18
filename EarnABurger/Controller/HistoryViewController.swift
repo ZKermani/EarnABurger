@@ -10,6 +10,7 @@ import FirebaseFirestore
 
 class HistoryViewController: UIViewController {
     
+    @IBOutlet weak var HistoryTabBar: UITabBar!
     @IBOutlet weak var tableView: UITableView!
     let db = Firestore.firestore()
     var activities: [String] = []
@@ -17,6 +18,8 @@ class HistoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Delegates
+        HistoryTabBar.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -89,4 +92,27 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
     //            handleDeleteFolder(for: indexPath)
     //        }
     //    }
+}
+
+
+// MARK: - Tab bar delegate
+extension HistoryViewController: UITabBarDelegate {
+    
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        
+        if let title = item.title {
+            
+            switch title {
+            case "Home":
+                break
+            case "Start":
+                self.performSegue(withIdentifier: "HistoryToStart", sender: self)
+            case "Past Activities":
+                break
+            default:
+                print("Unknown tab bar item!")
+                return
+            }
+        }
+    }
 }
