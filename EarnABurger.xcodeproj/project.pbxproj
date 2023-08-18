@@ -108,10 +108,10 @@
 		8D4143F227F468A400B664B9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2C652A7F2A8F6A7200596D21 /* StartViewController.swift */,
 				2C5B52EE2A83914900BEDA3F /* LogInViewController.swift */,
 				2C5B52EC2A83913300BEDA3F /* SignUpViewController.swift */,
 				2C652A7D2A8F62C000596D21 /* HomeViewController.swift */,
+				2C652A7F2A8F6A7200596D21 /* StartViewController.swift */,
 				8DF64C6E27F4E0D500AFCE10 /* LiveActivityViewController.swift */,
 				2C5B52E62A80FB4000BEDA3F /* ActivitySummaryViewController.swift */,
 				2C5B52E82A81002A00BEDA3F /* HistoryViewController.swift */,

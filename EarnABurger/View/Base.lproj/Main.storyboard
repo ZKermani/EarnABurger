@@ -51,6 +51,19 @@
                                 <color key="barTintColor" red="0.023529411760000001" green="0.17254901959999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tabBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XxG-wT-zax">
+                                <rect key="frame" x="153" y="358" width="113" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.070588238540000001" green="0.1686274707" blue="0.1843137443" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="START">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="StartButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bv5-jl-cOc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.106669344" green="0.26279917359999999" blue="0.28420302269999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -74,6 +87,7 @@
                         <outlet property="ActivityPickerView" destination="CKf-dm-Jiz" id="lpG-BC-dMW"/>
                         <outlet property="HomeTabBar" destination="Tp1-H7-wIb" id="fSg-TA-DmX"/>
                         <outlet property="ProfileImageView" destination="VSM-1R-4dc" id="8N4-C0-brB"/>
+                        <outlet property="StartButton" destination="XxG-wT-zax" id="edv-eN-EJw"/>
                         <outlet property="StatFrequencyPickerView" destination="v2S-J2-Dkf" id="Gy9-br-dyy"/>
                         <segue destination="QzU-Ra-V7P" kind="presentation" identifier="StartToLiveActivity" modalPresentationStyle="fullScreen" id="XyA-XG-ku6"/>
                         <segue destination="tpM-OB-xbg" kind="presentation" identifier="StartToHistory" modalPresentationStyle="fullScreen" id="LCz-as-ZJK"/>
@@ -585,7 +599,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="M1c-HB-jMn"/>
-        <segue reference="BAD-bg-QS0"/>
+        <segue reference="LCz-as-ZJK"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="SampleProfile.jpeg" width="640" height="640"/>

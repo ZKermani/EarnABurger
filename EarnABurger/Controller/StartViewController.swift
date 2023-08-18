@@ -17,13 +17,15 @@ class StartViewController: UIViewController  {
     @IBOutlet weak var ActivityPickerView: UIPickerView!
     @IBOutlet weak var ProfileImageView: UIImageView!
     
+    @IBOutlet weak var StartButton: UIButton!
     @IBOutlet weak var HomeTabBar: UITabBar!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // UI adjustments
         ProfileImageView.layer.cornerRadius = 0.5 * ProfileImageView.frame.height
-        ProfileImageView.clipsToBounds = true
+        ProfileImageView.clipsToBounds      = true
+        StartButton.layer.cornerRadius      = cornerRadiusMultiplier * StartButton.frame.height
         
         // Delegates
         HomeTabBar.delegate = self
@@ -37,6 +39,11 @@ class StartViewController: UIViewController  {
         StatFrequencyPickerView.dataSource = self
         StatFrequencyPickerView.delegate = self
     }
+    
+    @IBAction func StartButtonTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "StartToLiveActivity", sender: self)
+    }
+    
 }
 
 //MARK: - UIPickerView
@@ -85,7 +92,7 @@ extension StartViewController: UITabBarDelegate {
             case "Home":
                 break
             case "Start":
-                performSegue(withIdentifier: "StartToLiveActivity", sender: self)
+                break
             case "Past Activities":
                 self.performSegue(withIdentifier: "StartToHistory", sender: self)
             default:
