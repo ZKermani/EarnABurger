@@ -352,9 +352,11 @@
                         <outlet property="HistoryTabBar" destination="Rab-7I-fq0" id="JQM-fe-R7b"/>
                         <outlet property="tableView" destination="7Pr-lW-0dA" id="bYi-Q9-Eu2"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="HistoryToStart" modalPresentationStyle="fullScreen" id="JA1-7l-uxb"/>
+                        <segue destination="vKx-6q-3ig" kind="unwind" identifier="HistoryToHome" unwindAction="unwind:" id="dCe-T4-gw6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o73-id-R9x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="vKx-6q-3ig" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1844.9275362318842" y="947.54464285714278"/>
         </scene>
@@ -604,7 +606,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="Lo2-yW-kKI"/>
         <segue reference="LCz-as-ZJK"/>
-        <segue reference="VHe-rY-GYx"/>
+        <segue reference="JA1-7l-uxb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="SampleProfile.jpeg" width="640" height="640"/>

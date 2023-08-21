@@ -104,7 +104,7 @@ extension HistoryViewController: UITabBarDelegate {
             
             switch title {
             case "Home":
-                break
+                homeTabBarTouched()
             case "Start":
                 self.performSegue(withIdentifier: "HistoryToStart", sender: self)
             case "Past Activities":
@@ -114,5 +114,9 @@ extension HistoryViewController: UITabBarDelegate {
                 return
             }
         }
+    }
+
+    func homeTabBarTouched() {
+        performSegue(withIdentifier: "HistoryToHome", sender: self)
     }
 }
