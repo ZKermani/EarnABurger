@@ -17,6 +17,8 @@ class ActivitySummaryViewController: UIViewController {
     @IBOutlet weak var DeleteButton: UIButton!
     @IBOutlet weak var SaveButton: UIButton!
     
+    @IBOutlet weak var SummaryTabBar: UITabBar!
+    
     let db = Firestore.firestore()
     
     override func viewDidLoad() {
@@ -25,6 +27,8 @@ class ActivitySummaryViewController: UIViewController {
         // UI Adjustments
         DeleteButton.layer.cornerRadius = cornerRadiusMultiplier * DeleteButton.frame.height
         SaveButton.layer.cornerRadius   = cornerRadiusMultiplier * SaveButton.frame.height
+        
+        SummaryTabBar.delegate = self
         
     }
     
@@ -61,5 +65,31 @@ class ActivitySummaryViewController: UIViewController {
             alert.addAction(okAction)
             self.present(alert, animated: true, completion: nil)
         }
+    }
+}
+
+// MARK: - Tab bar delegate
+extension ActivitySummaryViewController: UITabBarDelegate {
+    
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        
+        if let title = item.title {
+            
+            switch title {
+            case "Home":
+                homeTabBarTouched()
+            case "Start":
+                break
+            case "Past Activities":
+                break //self.performSegue(withIdentifier: "StartToHistory", sender: self)
+            default:
+                print("Unknown tab bar item!")
+                return
+            }
+        }
+    }
+    
+    func homeTabBarTouched() {
+        performSegue(withIdentifier: "SaveToHome", sender: self)
     }
 }
