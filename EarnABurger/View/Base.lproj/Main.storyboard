@@ -40,7 +40,7 @@
                                 </subviews>
                             </stackView>
                             <tabBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tp1-H7-wIb">
-                                <rect key="frame" x="0.0" y="847" width="414" height="49"/>
+                                <rect key="frame" x="0.0" y="813" width="414" height="83"/>
                                 <color key="backgroundColor" red="0.106669344" green="0.26279917359999999" blue="0.28420302269999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <tabBarItem title="Home" image="house" catalog="system" id="kXC-1K-dm8"/>
@@ -91,9 +91,11 @@
                         <outlet property="StatFrequencyPickerView" destination="v2S-J2-Dkf" id="Gy9-br-dyy"/>
                         <segue destination="QzU-Ra-V7P" kind="presentation" identifier="StartToLiveActivity" modalPresentationStyle="fullScreen" id="XyA-XG-ku6"/>
                         <segue destination="tpM-OB-xbg" kind="presentation" identifier="StartToHistory" modalPresentationStyle="fullScreen" id="LCz-as-ZJK"/>
+                        <segue destination="ZBE-8m-m3K" kind="unwind" identifier="StartToHome" unwindAction="unwind:" id="Lff-4A-0fn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="ZBE-8m-m3K" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2707.2463768115945" y="64.955357142857139"/>
         </scene>
@@ -553,7 +555,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tabBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfa-ka-tEp">
-                                <rect key="frame" x="-1" y="813" width="415" height="49"/>
+                                <rect key="frame" x="-1" y="812" width="415" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
@@ -600,9 +602,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="M1c-HB-jMn"/>
+        <segue reference="Lo2-yW-kKI"/>
         <segue reference="LCz-as-ZJK"/>
-        <segue reference="JA1-7l-uxb"/>
+        <segue reference="VHe-rY-GYx"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="SampleProfile.jpeg" width="640" height="640"/>

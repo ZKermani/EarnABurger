@@ -90,7 +90,7 @@ extension StartViewController: UITabBarDelegate {
             
             switch title {
             case "Home":
-                break
+                homeTabBarTouched()
             case "Start":
                 break
             case "Past Activities":
@@ -100,5 +100,9 @@ extension StartViewController: UITabBarDelegate {
                 return
             }
         }
+    }
+    
+    func homeTabBarTouched() {
+        performSegue(withIdentifier: "StartToHome", sender: self)
     }
 }
