@@ -58,6 +58,21 @@ class LiveActivityViewController: UIViewController {
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
         }
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        //print("viewDidDisappear was triggered in LiveActivity")
+        locationManager.stopUpdatingLocation()
+        self.resetView()
+    }
+    
+    func resetView() {
+        timerCounting = false
+        timer.invalidate()
+        traveledDistance = 0.0
+        oldPosition = 0.0
+        currentPace = 0.0
+    }
+    
     @IBAction func pauseTapped(_ sender: UIButton) {
         
         var font = UIFont()
