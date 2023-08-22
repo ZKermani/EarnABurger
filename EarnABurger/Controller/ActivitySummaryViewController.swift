@@ -79,9 +79,9 @@ extension ActivitySummaryViewController: UITabBarDelegate {
             case "Home":
                 homeTabBarTouched()
             case "Start":
-                break
+                self.performSegue(withIdentifier: "SaveToStart", sender: self)
             case "Past Activities":
-                break //self.performSegue(withIdentifier: "StartToHistory", sender: self)
+                self.performSegue(withIdentifier: "SaveToHistory", sender: self)
             default:
                 print("Unknown tab bar item!")
                 return
