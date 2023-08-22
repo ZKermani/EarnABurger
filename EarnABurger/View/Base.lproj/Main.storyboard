@@ -16,18 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SampleProfile.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="VSM-1R-4dc">
-                                <rect key="frame" x="138.5" y="68" width="137" height="136.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="VSM-1R-4dc" secondAttribute="height" id="hXH-eP-72A"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Morning!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a32-eD-k1M">
-                                <rect key="frame" x="138.5" y="224.5" width="137" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hQb-Vw-zdz">
                                 <rect key="frame" x="0.0" y="483.5" width="414" height="216"/>
                                 <subviews>
@@ -63,23 +51,25 @@
                                     <action selector="StartButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bv5-jl-cOc"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready to jam?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rF-Xr-Ldn">
+                                <rect key="frame" x="116" y="171" width="182" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.106669344" green="0.26279917359999999" blue="0.28420302269999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="a32-eD-k1M" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5G3-9K-XJR"/>
+                            <constraint firstItem="7rF-Xr-Ldn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="7Ml-Xy-hX1"/>
                             <constraint firstItem="hQb-Vw-zdz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="ESw-hd-5ss"/>
                             <constraint firstItem="XxG-wT-zax" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.85" id="KUQ-T4-nFI"/>
                             <constraint firstAttribute="trailing" secondItem="Tp1-H7-wIb" secondAttribute="trailing" id="Odg-iR-RwU"/>
-                            <constraint firstItem="a32-eD-k1M" firstAttribute="width" secondItem="VSM-1R-4dc" secondAttribute="width" id="QDu-RP-qgI"/>
                             <constraint firstItem="XxG-wT-zax" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XG6-tp-Nl0"/>
                             <constraint firstAttribute="bottom" secondItem="Tp1-H7-wIb" secondAttribute="bottom" id="c3P-7j-hJg"/>
-                            <constraint firstItem="VSM-1R-4dc" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.33" id="kQk-Hj-r6x"/>
+                            <constraint firstItem="7rF-Xr-Ldn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="123" id="id1-Ut-ekb"/>
                             <constraint firstItem="hQb-Vw-zdz" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.3" id="mEC-LB-RWA"/>
-                            <constraint firstItem="VSM-1R-4dc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="nsS-hZ-JUa"/>
                             <constraint firstItem="Tp1-H7-wIb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rsl-ec-xBG"/>
-                            <constraint firstItem="VSM-1R-4dc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="wV4-PF-ZWX"/>
-                            <constraint firstItem="a32-eD-k1M" firstAttribute="top" secondItem="VSM-1R-4dc" secondAttribute="bottom" constant="20" id="xf1-8q-QEk"/>
                             <constraint firstItem="hQb-Vw-zdz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yeR-S1-0Mf"/>
                         </constraints>
                     </view>
@@ -87,7 +77,6 @@
                     <connections>
                         <outlet property="ActivityPickerView" destination="CKf-dm-Jiz" id="lpG-BC-dMW"/>
                         <outlet property="HomeTabBar" destination="Tp1-H7-wIb" id="fSg-TA-DmX"/>
-                        <outlet property="ProfileImageView" destination="VSM-1R-4dc" id="8N4-C0-brB"/>
                         <outlet property="StartButton" destination="XxG-wT-zax" id="edv-eN-EJw"/>
                         <outlet property="StatFrequencyPickerView" destination="v2S-J2-Dkf" id="Gy9-br-dyy"/>
                         <segue destination="QzU-Ra-V7P" kind="presentation" identifier="StartToLiveActivity" modalPresentationStyle="fullScreen" id="XyA-XG-ku6"/>
@@ -563,7 +552,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tabBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfa-ka-tEp">
-                                <rect key="frame" x="0.0" y="847" width="414" height="49"/>
+                                <rect key="frame" x="0.0" y="813" width="414" height="83"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <tabBarItem title="Home" image="house" catalog="system" id="dJx-UF-nbj"/>
@@ -573,18 +562,36 @@
                                 </items>
                                 <color key="barTintColor" red="0.070588238540000001" green="0.1686274707" blue="0.1843137443" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </tabBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Morning!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a32-eD-k1M">
+                                <rect key="frame" x="150" y="268" width="114" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SampleProfile.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="VSM-1R-4dc">
+                                <rect key="frame" x="138.5" y="96" width="137" height="136.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VSM-1R-4dc" secondAttribute="height" id="hXH-eP-72A"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0Nn-vZ-29X"/>
                         <color key="backgroundColor" red="0.14901961389999999" green="0.2588235438" blue="0.27843138579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="a32-eD-k1M" firstAttribute="top" secondItem="VSM-1R-4dc" secondAttribute="bottom" constant="35.5" id="1rS-yB-BPx"/>
+                            <constraint firstItem="VSM-1R-4dc" firstAttribute="top" secondItem="0Nn-vZ-29X" secondAttribute="top" constant="48" id="EPi-Ob-m7F"/>
                             <constraint firstAttribute="bottom" secondItem="Rfa-ka-tEp" secondAttribute="bottom" id="NpS-hz-BXz"/>
                             <constraint firstAttribute="leading" secondItem="Rfa-ka-tEp" secondAttribute="leading" id="RFU-mu-Hy3"/>
                             <constraint firstAttribute="trailing" secondItem="Rfa-ka-tEp" secondAttribute="trailing" id="U5P-ST-Ly0"/>
+                            <constraint firstItem="VSM-1R-4dc" firstAttribute="centerX" secondItem="0Nn-vZ-29X" secondAttribute="centerX" id="lUx-jp-L9w"/>
+                            <constraint firstItem="VSM-1R-4dc" firstAttribute="width" secondItem="Co2-dv-xch" secondAttribute="width" multiplier="0.33" id="ux5-kZ-rMU"/>
+                            <constraint firstItem="a32-eD-k1M" firstAttribute="centerX" secondItem="VSM-1R-4dc" secondAttribute="centerX" id="wLM-RR-fVA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wSw-gp-VPt"/>
                     <connections>
                         <outlet property="HomeTabBar" destination="Rfa-ka-tEp" id="bIn-00-S4S"/>
+                        <outlet property="ProfilePicImageView" destination="VSM-1R-4dc" id="cd1-0l-ESA"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="HomeToStart" modalPresentationStyle="fullScreen" id="VHe-rY-GYx"/>
                         <segue destination="hwr-iL-V78" kind="presentation" identifier="HomeToLogin" modalPresentationStyle="fullScreen" id="aNF-L0-wOF"/>
                         <segue destination="tpM-OB-xbg" kind="presentation" identifier="HomeToHistory" modalPresentationStyle="fullScreen" id="BAD-bg-QS0"/>

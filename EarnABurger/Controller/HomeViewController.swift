@@ -10,9 +10,13 @@ import UIKit
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var HomeTabBar: UITabBar!
+    @IBOutlet weak var ProfilePicImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ProfilePicImageView.layer.cornerRadius = 0.5 * ProfilePicImageView.frame.height
+        ProfilePicImageView.clipsToBounds      = true
 
         HomeTabBar.delegate = self
     }

@@ -15,7 +15,6 @@ class StartViewController: UIViewController  {
     
     @IBOutlet weak var StatFrequencyPickerView: UIPickerView!
     @IBOutlet weak var ActivityPickerView: UIPickerView!
-    @IBOutlet weak var ProfileImageView: UIImageView!
     
     @IBOutlet weak var StartButton: UIButton!
     @IBOutlet weak var HomeTabBar: UITabBar!
@@ -23,8 +22,6 @@ class StartViewController: UIViewController  {
         super.viewDidLoad()
         
         // UI adjustments
-        ProfileImageView.layer.cornerRadius = 0.5 * ProfileImageView.frame.height
-        ProfileImageView.clipsToBounds      = true
         StartButton.layer.cornerRadius      = cornerRadiusMultiplier * StartButton.frame.height
         
         // Delegates
