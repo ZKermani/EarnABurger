@@ -562,9 +562,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfa-ka-tEp">
-                                <rect key="frame" x="-1" y="812" width="414" height="48"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <tabBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfa-ka-tEp">
+                                <rect key="frame" x="0.0" y="847" width="414" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <tabBarItem title="Home" image="house" catalog="system" id="dJx-UF-nbj"/>
@@ -577,6 +576,11 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0Nn-vZ-29X"/>
                         <color key="backgroundColor" red="0.14901961389999999" green="0.2588235438" blue="0.27843138579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Rfa-ka-tEp" secondAttribute="bottom" id="NpS-hz-BXz"/>
+                            <constraint firstAttribute="leading" secondItem="Rfa-ka-tEp" secondAttribute="leading" id="RFU-mu-Hy3"/>
+                            <constraint firstAttribute="trailing" secondItem="Rfa-ka-tEp" secondAttribute="trailing" id="U5P-ST-Ly0"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wSw-gp-VPt"/>
                     <connections>
@@ -610,10 +614,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="XyA-XG-ku6"/>
+        <segue reference="aNF-L0-wOF"/>
         <segue reference="M1c-HB-jMn"/>
-        <segue reference="LCz-as-ZJK"/>
-        <segue reference="tVz-DE-CZH"/>
+        <segue reference="BAD-bg-QS0"/>
+        <segue reference="VHe-rY-GYx"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="SampleProfile.jpeg" width="640" height="640"/>
