@@ -69,6 +69,7 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ActivityCell", for: indexPath)
+        cell.textLabel?.textColor = .black
         cell.textLabel?.text = activities[indexPath.row]
         //cell.imageView?.image = UIImage(systemName: "folder.fill")
         return cell
