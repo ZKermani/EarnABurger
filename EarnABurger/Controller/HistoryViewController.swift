@@ -14,6 +14,7 @@ class HistoryViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     let db = Firestore.firestore()
     var activities: [String] = []
+    var activitySummaries: [ActivitySummary] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,7 @@ class HistoryViewController: UIViewController {
         HistoryTabBar.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(UINib(nibName: "ActivityCellTableViewCell", bundle: nil), forCellReuseIdentifier: "ActivityReusableCell")
         
         loadActivities()
     }
@@ -37,6 +39,9 @@ class HistoryViewController: UIViewController {
                     let data = document.data()
                     let activityString = self.convertActivitySummaryToString(data)
                     self.activities.append(activityString)
+                    
+                    let activitySummary = self.loadActivitySummary(data)
+                    self.activitySummaries.append(activitySummary)
 
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
@@ -58,6 +63,25 @@ class HistoryViewController: UIViewController {
         
         return activityString
     }
+    
+    func loadActivitySummary(_ activity: [String: Any]) -> ActivitySummary {
+        var activitySummary = ActivitySummary(date: "",
+                                              distance: "",
+                                              duration: "",
+                                              avgPace: "")
+        
+        if let date = activity[K.FStore.dateField] as? String,
+        let distance = activity[K.FStore.distanceField] as? String,
+        let duration = activity[K.FStore.durationField] as? String,
+           let avgPace = activity[K.FStore.avgPaceField] as? String {
+            activitySummary = ActivitySummary(date: date,
+                                              distance: distance,
+                                              duration: duration,
+                                              avgPace: avgPace)
+        }
+        
+        return activitySummary
+    }
 }
 
 
@@ -68,9 +92,19 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ActivityCell", for: indexPath)
-        cell.textLabel?.textColor = .black
-        cell.textLabel?.text = activities[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ActivityReusableCell", for: indexPath) as! ActivityCellTableViewCell
+        let activitySummary = activitySummaries[indexPath.row]
+        cell.DateLabel.text = activitySummary.date
+        cell.DistanbeLabel.text = activitySummary.distance
+        cell.TimeLabel.text = activitySummary.duration
+        cell.PaceLabel.text = activitySummary.avgPace
+        
+        cell.DistanceUnitLabel.text = "mi"
+        cell.TimeUnitLabel.text = "time"
+        cell.PaceUnitLabel.text = "min/mi"
+        
+//        cell.textLabel?.textColor = .black
+//        cell.textLabel?.text = activities[indexPath.row]
         //cell.imageView?.image = UIImage(systemName: "folder.fill")
         return cell
     }

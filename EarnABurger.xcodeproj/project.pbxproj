@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C546A3B2A961804009966AB /* ActivityCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C546A392A961804009966AB /* ActivityCellTableViewCell.swift */; };
+		2C546A3C2A961804009966AB /* ActivityCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C546A3A2A961804009966AB /* ActivityCellTableViewCell.xib */; };
 		2C5B52E72A80FB4000BEDA3F /* ActivitySummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B52E62A80FB4000BEDA3F /* ActivitySummaryViewController.swift */; };
 		2C5B52E92A81002A00BEDA3F /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B52E82A81002A00BEDA3F /* HistoryViewController.swift */; };
 		2C5B52ED2A83913300BEDA3F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B52EC2A83913300BEDA3F /* SignUpViewController.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C546A392A961804009966AB /* ActivityCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ActivityCellTableViewCell.swift; path = EarnABurger/View/ActivityCellTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		2C546A3A2A961804009966AB /* ActivityCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ActivityCellTableViewCell.xib; path = EarnABurger/View/ActivityCellTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		2C5B52E62A80FB4000BEDA3F /* ActivitySummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySummaryViewController.swift; sourceTree = "<group>"; };
 		2C5B52E82A81002A00BEDA3F /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		2C5B52EC2A83913300BEDA3F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = EarnABurger/Controller/SignUpViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -100,6 +104,8 @@
 		8D4143F027F4689000B664B9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2C546A392A961804009966AB /* ActivityCellTableViewCell.swift */,
+				2C546A3A2A961804009966AB /* ActivityCellTableViewCell.xib */,
 				8D3FE76427F1CAD80010DECD /* Main.storyboard */,
 			);
 			path = View;
@@ -207,6 +213,7 @@
 			files = (
 				8D3FE76B27F1CADC0010DECD /* LaunchScreen.storyboard in Resources */,
 				8DD226F427F31AAF009C392B /* SampleProfile.jpeg in Resources */,
+				2C546A3C2A961804009966AB /* ActivityCellTableViewCell.xib in Resources */,
 				2C755AB42A80EACD00E37DCE /* GoogleService-Info.plist in Resources */,
 				8D3FE76827F1CADC0010DECD /* Assets.xcassets in Resources */,
 				8D3FE76627F1CAD80010DECD /* Main.storyboard in Resources */,
@@ -268,6 +275,7 @@
 				2C5B52ED2A83913300BEDA3F /* SignUpViewController.swift in Sources */,
 				8D3FE76127F1CAD80010DECD /* SceneDelegate.swift in Sources */,
 				2C652A802A8F6A7200596D21 /* StartViewController.swift in Sources */,
+				2C546A3B2A961804009966AB /* ActivityCellTableViewCell.swift in Sources */,
 				8DF64C6F27F4E0D600AFCE10 /* LiveActivityViewController.swift in Sources */,
 				2C652A7E2A8F62C000596D21 /* HomeViewController.swift in Sources */,
 				2C5B52E72A80FB4000BEDA3F /* ActivitySummaryViewController.swift in Sources */,
